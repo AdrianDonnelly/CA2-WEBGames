@@ -1,18 +1,17 @@
-category.html
 {% extends "base.html" %}
 {% load static %}
 {% block metadescription %}
     {% if category %}
         {{ category.description|truncatewords:155 }}
     {% else %}
-        Welcome to the cushion store where you can buy comfy and awesome cushions.
+    Lorem ipsum dolor sit amet
     {% endif %}
 {% endblock %}
 {% block title %}
     {% if category %}
-        {{ category.name }} - Perfect Cushion Store
+        {{ category.name }} - Lorem ipsum dolor sit amet
     {% else %}
-        See Our Cushion Collection - Perfect Cushion Store
+        Lorem ipsum dolor sit amete
     {% endif %}
 {% endblock %}
 {% block content %}
@@ -39,10 +38,13 @@ category.html
 <br>
 <div>
     <h1 >Our Products Collection</h1>
-    <p>Finding the perfect cushion for your room can instantly add to the levels of comfort and
-        sense of style throughout your home. They can transform the blandest of decors instantly
-        by adding colour, softness and an air of cosiness. As well as being comfy and looking great
-        our range of cushions will certainly embolden your décor with personalised charm.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid
+        unt ut labore et dolore magna aliqua. Diam donec adipiscing tristique risus. Feugiat 
+        sed lectus vestibulum mattis ullamcorper velit. Sodales neque sodales ut etiam sit 
+        amet nisl purus. Varius duis at consectetur lorem. Morbi enim nunc faucibus a pellentesque. 
+        Tempor orci dapibus ultrices in iaculis nunc. Augue neque gravida in fermentum. Viverra maecenas 
+        accumsan lacus vel facilisis volutpat est. get egestas purus viverra accumsan in nisl nisi 
+        scelerisque eu.</p>
 </div>
 {% endif %}
 <div>
@@ -50,7 +52,7 @@ category.html
         {% for product in prods %}
             <div>
                 <div>
-                    <a class ="img" href=""><img src="{{product.image.url}}" alt="{{product.name}}"></a>
+                    
                     <div>
                         <h4>{{product.name}}</h4>
                         <p>€{{product.price}}</p>
