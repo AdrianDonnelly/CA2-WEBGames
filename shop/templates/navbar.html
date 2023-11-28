@@ -12,11 +12,6 @@
                                 {% for cat in links %}
                                     <li><a class="text-light dropdown-item" href= "{{ cat.get_absolute_url }}"> {{cat.name}}</a></li>
                                 {% endfor %}
-                                  <a class=" catagories dropdown-menu" aria-labelledby="navbarDropdown">
-                                      {% for product in links%}
-                                          <li><a class="text-light dropdown-item" href= "{{ product.get_absolute_url }}"> {{product.name}}</a></li>
-                                      {% endfor %}
-                                  </a>
                             </ul>
                         </li>
         </ul>
@@ -35,18 +30,8 @@
 
 
   <div class="d-flex justify-content-end">
-    <form class="nav-item" style="width: 25rem" action="" method="get">
-      <input
-        class="form-control me-2"
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-        name="q"
-      />
+    <form class="nav-item" style="width: 25rem" action="{% url 'search_app:searchResult' %}" method="get">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q"/>
     </form>
-    <form class="d-flex" action="{% url 'search_app:searchResult' %}" method="get">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-  </form>
   </div>
 </nav>

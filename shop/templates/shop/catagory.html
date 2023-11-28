@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<div class="text-light px-5">
+  <h1>{{category.name}}</h1>
+</div>
+<div class="container-fluid d-flex justify-content-between text-light px-5">
+  {% if category %}
+  <div>
+    <p>{{category.description}}</p>
+    {% for product in prods %}
+    <div>
+      <div>
+        <a class="img" href=""><img src="{{product.image.url}}" alt="{{product.name}}"/></a>
+        <div>
+          <h4>{{product.name}}</h4>
+          <p>€{{product.price}}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %} {% endblock %}
+</div>
