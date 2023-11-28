@@ -1,0 +1,48 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+</head>
+<nav class="navbar d-flex flex-row align-items-center px-5">
+  <div class="d-flex justify-content-start align-items-center" style="width: 30rem">
+    <button class=" catagories navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="text-light nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            catagories</a>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+                <a class="text-light nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">catagories</a>
+                    <ul class="catagories nav-link px-2 mx-1 text-light form-control">
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'shop:all_products' %}">All Products</a></li>
+                                {% for cat in links %}
+                            <li><a class="dropdown-item" href="{{cat.get_absolute_url}}">{{cat.name}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+        </ul>
+    </ul>
+
+    </div>
+<ul
+    class="bestsellers nav-link px-2 mx-1 text-light form-control d-flex justify-content-center">
+      Bestsellers
+    </ul>
+    <ul
+      class="deals nav-link px-2 mx-1 text-light form-control d-flex justify-content-center">
+      Deals
+</ul>
+
+
+  <div class="d-flex justify-content-end">
+    <form class="nav-item" style="width: 25rem" action="" method="get">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+        name="q"
+      />
+    </form>
+  </div>
+</nav>
