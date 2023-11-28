@@ -14,9 +14,10 @@
             <a href="{% url 'logout' %}">Log out</a>
             {% else %}  
             <p> You are not logged in</p>
-            <a class="nav-link m-2" href="{% url 'login' %}">Sign in / Register</a>
-
+            <a class="nav-link m-2" href="{% url 'login' %}">Sign in</a>
+            <a class="nav-link m-2" href="{% url 'signup' %}">Sing up</a>
             {% endif %}
+            
             
         </ul>   
         <ul class="d-flex justify-content-end">
