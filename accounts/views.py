@@ -14,7 +14,8 @@ class SignUpView(CreateView):
     def post(self, request, *args, **kwargs):
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
+            signup_user = form.save()
+            null=True
             username = form.cleaned_data.get('username')
             signup_user = CustomUser.objects.get(username=username)
             customer_group = Group.objects.get(name='Customer')
