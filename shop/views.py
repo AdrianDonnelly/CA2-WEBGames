@@ -6,6 +6,7 @@ def prod_list(request, category_id=None):
     category = None
     products = Product.objects.filter(available=True)
     if category_id:
+<<<<<<< HEAD
         category = get_object_or_404(Category, id= category_id)
         products = Product.objects.filter(category=category, available=True)
     return render(request, 'shop/catagory.html',{'category':category, 'prods':products})
@@ -23,3 +24,12 @@ def prod_list(request, category_id=None):
 def product_detail(request, category_id, product_id):
     product = get_object_or_404(Product, category_id=category_id, id=product_id)
     return render(request, 'shop/product.html', {'product':product})
+=======
+        category = get_object_or_404 (Category, id=category_id)
+        products = Product.objects.filter(category-category, available=True)
+    return render(request, 'home.html', {'category': category, 'prods': products})
+
+def product_detail(request,category_id, product_id):
+    product = get_object_or_404(Product, category_id=category_id, id=product_id)
+    return render(request,'home.html',{'product':product})
+>>>>>>> 4e3f4ca (product detail)

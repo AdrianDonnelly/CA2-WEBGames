@@ -10,9 +10,13 @@
                     <ul class="nav-link px-2 mx-1 text-light form-control">
                         <ul class=" catagories dropdown-menu" aria-labelledby="navbarDropdown">
                                 {% for cat in links %}
-                                    <li><a class="text-light dropdown-item" href="{{cat.get_absolute_url}}">{{cat.name}}</a></li>
-
+                                    <li><a class="text-light dropdown-item" href= "{{ cat.get_absolute_url }}"> {{cat.name}}</a></li>
                                 {% endfor %}
+                                  <a class=" catagories dropdown-menu" aria-labelledby="navbarDropdown">
+                                      {% for product in links%}
+                                          <li><a class="text-light dropdown-item" href= "{{ product.get_absolute_url }}"> {{product.name}}</a></li>
+                                      {% endfor %}
+                                  </a>
                             </ul>
                         </li>
         </ul>
