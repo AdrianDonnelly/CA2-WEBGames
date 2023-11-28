@@ -8,8 +8,14 @@
     </div>
     <div class="nav-item d-flex justify-content-end text-light"style="text-align: center;">
         <ul class="d-flex justify-content-end">
-            <i class="fa-solid fa-user fa-2xl m-3 mt-4"></i>   
+            <i class="fa-solid fa-user fa-2xl m-3 mt-4"></i> 
+            {% if user.is_authenticated %}
+            <p>Hi {{user.username}}</p>
+            <a href="{% url 'logout' %}">Log out</a>
+            {% else %}  
+            <p> You are not logged in</p>
             <a class="nav-link m-2" href="{% url 'login' %}">Sign in / Register</a>
+            {% endif %}
         </ul>   
         <ul class="d-flex justify-content-end">
             <i class="fa-solid fa-cart-shopping fa-2xl m-3 mt-4"></i>

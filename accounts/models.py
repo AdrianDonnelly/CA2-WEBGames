@@ -1,3 +1,7 @@
-from django.db import models
 
-# Create your models here.
+from django.urls import path
+from .views import HomePageView
+
+urlpatterns = [
+    path('', HomePageView.as_view(), name='home'),
+]
