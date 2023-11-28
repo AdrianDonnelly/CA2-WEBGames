@@ -8,4 +8,4 @@ def prod_list(request, category_id=None):
     if category_id:
         category = get_object_or_404 (Category, id=category_id)
         products = Product.objects.filter(category-category, available=True)
-    return render(request, 'shop/category.html', {'category': category, 'prods': products})
+    return render(request, 'shop/catagory.html', {'category': category, 'prods': products})

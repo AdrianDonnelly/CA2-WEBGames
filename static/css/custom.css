@@ -1,0 +1,14 @@
+.base {
+    max-width: 80rem;
+    margin-left: 20rem;
+    background-color: rgba(28, 28, 28, 1)
+}
+.catagories{
+    background-color: rgba(64, 64, 64, 1)
+}
+.bestsellers{
+    background-color: rgba(64, 64, 64, 1)
+}
+.deals{
+    background-color:rgba(64, 64, 64, 1)
+}
