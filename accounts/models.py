@@ -1,7 +1,6 @@
+from django.db import models
+from django.contrib.auth.models import AbstractUser
 
-from django.urls import path
-from .views import HomePageView
-
-urlpatterns = [
-    path('', HomePageView.as_view(), name='home'),
-]
+# Create your models here.
+class CustomUser(AbstractUser):
+    age = models.PositiveIntegerField(null=True, blank=True)
