@@ -1,15 +1,32 @@
-.base {
-    max-width: 80rem;
+body{
+    display:flex;
+    justify-content: center;
     background-color: rgba(28, 28, 28, 1);
 }
+.base {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 80rem;
+    min-width: 80rem;;
+    background-color: rgba(28, 28, 28, 1);
+}
+nav{
+    display:flex;
+    align-content: center;
+    justify-content: space-between;
+}
 .catagories{
-    background-color: rgba(64, 64, 64, 1)
+    background-color: rgba(64, 64, 64, 1);
 }
 .bestsellers{
     background-color: rgba(64, 64, 64, 1)
 }
 .deals{
     background-color:rgba(64, 64, 64, 1)
+}
+.cat_img{
+    max-width: 10rem;
 }
 /****Cart Page temp code ***/
 .my_custom_table {
