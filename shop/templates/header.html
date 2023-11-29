@@ -12,8 +12,7 @@
             {% if user.is_authenticated %}
             <p>Hi {{user.username}}</p>
             <a href="{% url 'logout' %}">Log out</a>
-            {% else %}  
-            <p> You are not logged in</p>
+            {% else %} 
             <a class="nav-link m-2" href="{% url 'login' %}">Sign in</a>
             <a class="nav-link m-2" href="{% url 'signup' %}">Sign up</a>
             {% endif %}
