@@ -1,10 +1,10 @@
-% extends "base.html" %}
+{% extends "base.html" %}
 {% load static %}
 {% block metadescription %}
 This is the shopping cart page. Proceed to review your items and place the order.
 {% endblock %}
 {% block title %}
-Cart - Perfect Cushion Store
+Cart -
 {% endblock %}
 {% block content %}
 {% if not cart_items %}
@@ -16,7 +16,7 @@ Cart - Perfect Cushion Store
         </h1>
         <br>
         <p class="text-center">
-            Please click <a href="{% url 'shop:all_products' %}">here</a> to continue shopping.
+            Please click <a href="{% url 'shop:home' %}">here</a> to continue shopping.
         </p>
     </div>
 </div>
@@ -99,7 +99,7 @@ Cart - Perfect Cushion Store
             </tbody>
         </table>
         <div class="mx-auto">
-            <a href="{% url 'shop:all_products' %}" class="btn btn-secondary btn-block 
+            <a href="{% url 'shop:products' %}" class="btn btn-secondary btn-block 
                  my_custom_button">Continue
                 Shopping</a>
         </div>
