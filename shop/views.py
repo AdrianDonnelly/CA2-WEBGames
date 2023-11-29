@@ -28,7 +28,7 @@ def product_detail(request, category_id, product_id):
     product = get_object_or_404(Product, category_id=category_id, id=product_id)
     return render(request, 'shop/product.html', {'product':product})
 
-def bestseller(request,product_id=None):
-    bestseller = Bestseller.objects.filter(available=True)
-    products = get_object_or_404(Product, id=product_id)
-    return render(request, 'shop/bestseller.html', {'bestseller':bestseller , 'prods':products})
+def bestseller(request):
+    bestsellers = Bestseller.objects.select_related('product').filter(product__available=True)
+    products = Product.objects.filter(id__in=bestsellers.values_list('product_id', flat=True))
+    return render(request, 'shop/bestsellers.html', {'bestsellers': bestsellers, 'prods': products})
