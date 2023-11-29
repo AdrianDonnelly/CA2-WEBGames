@@ -58,7 +58,7 @@ Cart -
                         €{{cart_item.sub_total}}
                     </td>
                     {% if cart_item.quantity < cart_item.product.stock %} <td>
-                        <a href="" class="custom_a"><i class="fas fa-plus-circle 
+                        <a href="{% url 'cart:add_cart' cart_item.product.id %}" class="custom_a"><i class="fas fa-plus-circle 
  custom_icon"></i></a>&nbsp;
                         <a href="" class="custom_a"><i class="fas fa-minus-circle 
  custom_icon"></i></a>&nbsp;
@@ -99,9 +99,8 @@ Cart -
             </tbody>
         </table>
         <div class="mx-auto">
-            <a href="{% url 'shop:products' %}" class="btn btn-secondary btn-block 
-                 my_custom_button">Continue
-                Shopping</a>
+            <a href="{% url 'shop:home' %}" class="btn btn-secondary btn-block my_custom_button">Continue Shopping</a>
+
         </div>
     </div>
 </div>
