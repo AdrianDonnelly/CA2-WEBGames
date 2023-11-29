@@ -14,7 +14,7 @@ def prod_list(request, category_id=None):
         products = Product.objects.filter(category=category, available=True)
     return render(request, 'shop/catagory.html',{'category':category, 'prods':products})
 
-    paginator = Paginator(products, 6)
+    paginator = Paginator(products, 4)
     try:
         page = int(request.Get.get('page','1'))
     except:
