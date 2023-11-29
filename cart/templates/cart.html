@@ -16,7 +16,7 @@ Cart -
         </h1>
         <br>
         <p class="text-center">
-            Please click <a href="{% url 'shop:home' %}">here</a> to continue shopping.
+            Please click <a href="{% url 'shop:home' %}"class="link-underline link-underline-opacity-0">here</a> to continue shopping.
         </p>
     </div>
 </div>
@@ -30,10 +30,10 @@ Cart -
         <br>
     </div>
 </div>
-<div class="row mx-auto">
-    <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+<div class=" row mx-auto">
+    <div class=" col-12 col-sm-12 col-md-12 col-lg-6 text-center">
         <table class="table my_custom_table">
-            <thead class="my_custom_thead">
+            <thead class=" my_custom_thead">
                 <tr>
                     <th colspan="5">
                         Your items
@@ -58,16 +58,13 @@ Cart -
                         €{{cart_item.sub_total}}
                     </td>
                     {% if cart_item.quantity < cart_item.product.stock %} <td>
-                        <a href="{% url 'cart:add_cart' cart_item.product.id %}" class="custom_a"><i class="fas fa-plus-circle 
- custom_icon"></i></a>&nbsp;
-                        <a href="{% url 'cart:cart_remove' cart_item.product.id %}" class="custom_a"><i class="fas fa-minus-circle 
- custom_icon"></i></a>&nbsp;
+                        <a href="{% url 'cart:add_cart' cart_item.product.id %}" class="custom_a"><i class="fas fa-plus-circle custom_icon"></i></a>&nbsp;
+                        <a href="{% url 'cart:cart_remove' cart_item.product.id %}" class="custom_a"><i class="fas fa-minus-circle custom_icon"></i></a>&nbsp;
                         <a href="{% url 'cart:full_remove' cart_item.product.id %}" class="custom_icon"><i class="fas fa-trash-alt custom_icon"></i></a>
                         </td>
                         {% else %}
                         <td>
-                            &nbsp;<a href="{% url 'cart:cart_remove' cart_item.product.id %}" class="custom_a"><i class="fas fa-minus-circle 
- custom_icon"></i></a>&nbsp;
+                            &nbsp;<a href="{% url 'cart:cart_remove' cart_item.product.id %}" class="custom_a"><i class="fas fa-minus-circle custom_icon"></i></a>&nbsp;
                             <a href="{% url 'cart:full_remove' cart_item.product.id %}" class="custom_icon"><i class="fas fa-trash-alt custom_icon"></i></a>
                         </td>
                         <td></td>
