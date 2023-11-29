@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product
+from .models import Category, Product, Bestseller
 from django.contrib import admin
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -15,4 +15,9 @@ class ProductAdmin(admin.ModelAdmin):
 admin.site.register(Product, ProductAdmin)
 
 
+
+class BestsellerAdmin(admin.ModelAdmin):
+    list_display = ['product']
+
+admin.site.register(Bestseller, BestsellerAdmin)
 # Register your models here.

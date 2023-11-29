@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Category , Product
+from .models import Category , Product , Bestseller
 from django.core.paginator import Paginator, EmptyPage, InvalidPage
 
 
@@ -27,3 +27,8 @@ def prod_list(request, category_id=None):
 def product_detail(request, category_id, product_id):
     product = get_object_or_404(Product, category_id=category_id, id=product_id)
     return render(request, 'shop/product.html', {'product':product})
+
+def bestseller(request,product_id=None):
+    bestseller = Bestseller.objects.filter(available=True)
+    products = get_object_or_404(Product, id=product_id)
+    return render(request, 'shop/bestseller.html', {'bestseller':bestseller , 'prods':products})
