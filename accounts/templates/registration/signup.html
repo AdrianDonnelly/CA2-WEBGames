@@ -7,45 +7,15 @@
   <form method="post" class="mt-4">
     {% csrf_token %}
     
-    <div class="mb-3">
-      {{ form.username.label_tag }}
-      {{ form.username }}
-      {% if form.username.errors %}
-        <small class="text-danger">{{ form.username.errors|join:", " }}</small>
-      {% endif %}
-    </div>
-
-    <div class="mb-3">
-      {{ form.email.label_tag }}
-      {{ form.email }}
-      {% if form.email.errors %}
-        <small class="text-danger">{{ form.email.errors|join:", " }}</small>
-      {% endif %}
-    </div>
-
-    <div class="mb-3">
-      {{ form.age.label_tag }}
-      {{ form.age }}
-      {% if form.age.errors %}
-        <small class="text-danger">{{ form.age.errors|join:", " }}</small>
-      {% endif %}
-    </div>
-
-    <div class="mb-3">
-      {{ form.password1.label_tag }}
-      {{ form.password1 }}
-      {% if form.password1.errors %}
-        <small class="text-danger">{{ form.password1.errors|join:", " }}</small>
-      {% endif %}
-    </div>
-
-    <div class="mb-3">
-      {{ form.password2.label_tag }}
-      {{ form.password2 }}
-      {% if form.password2.errors %}
-        <small class="text-danger">{{ form.password2.errors|join:", " }}</small>
-      {% endif %}
-    </div>
+    {% for field in form %}
+      <div class="mb-3">
+        {{ field.label_tag }}
+        {{ field }}
+        {% if field.errors %}
+          <small class="text-danger">{{ field.errors|join:", " }}</small>
+        {% endif %}
+      </div>
+    {% endfor %}
 
     <button class="btn btn-success" type="submit">Sign Up</button>
   </form>
