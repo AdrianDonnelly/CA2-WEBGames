@@ -1,8 +1,14 @@
 body{
     display:flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: rgba(28, 28, 28, 1);
+    background-color: rgb(148, 14, 14);
+    margin-bottom: 60px;
 }
+html {
+    position: relative;
+    min-height: 100%;
+  }
 .base {
     display:flex;
     justify-content: center;
@@ -16,6 +22,12 @@ nav{
     align-content: center;
     justify-content: space-between;
 }
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #fffbfb;
+}
 .catagories{
     background-color: rgba(64, 64, 64, 1);
 }
@@ -27,6 +39,9 @@ nav{
 }
 .cat_img{
     max-width: 10rem;
+}
+.card{
+    background-color: rgba(64, 64, 64, 1)
 }
 /****Cart Page temp code ***/
 .my_custom_table {
