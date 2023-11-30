@@ -11,7 +11,7 @@ class CustomUserCreationForm(UserCreationForm):
     def age_restriction(self):
         age = self.cleaned_data.get('age')
         if age is not None and age <18:
-            raise ValidationError(_('You must be at least 18 years old to register.'))
+            raise ValidationError(('You must be at least 18 years old to register.'))
         return age
 
 class CustomUserChangeForm(UserChangeForm):
