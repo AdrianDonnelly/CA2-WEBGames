@@ -44,32 +44,79 @@ nav{
     background-color: rgba(64, 64, 64, 1)
 }
 /****Cart Page temp code ***/
-.my_custom_table {
-    min-width: 400px;
-    font-size: 14px;
-    background-color: #000000 !important;
-    border-radius: 10px
-}
-.my_custom_thead {
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: .2em;
-}
-.custom_image {
-    width: 100px;
-    height: 100px;
- }
-.custom_a {
-    text-decoration: none;
- }
-.custom_icon {
-    text-decoration: none;
-    color: #868e96 !important;
-    
-}
+
 .my_custom_button {
-    margin-top: 5px;
+    border-radius: 20px;
+    height: 50px;
 }
+
+.my_custom_box {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.my_custom_table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px; 
+    margin-bottom: 0;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.my_custom_table td {
+    padding: 10px; 
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.my_custom_thead th {
+    background-color: #343a40;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.custom_image {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.custom_icon {
+    font-size: 20px;
+    color: #007bff;
+}
+
+.custom_a {
+    color: #007bff;
+}
+
+.stripe-checkout-container {
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+.my_custom_button {
+        height: 40px;
+    }
+
+.custom_image {
+        max-width: 40px;
+}
+
+.custom_icon {
+        font-size: 16px;
+}
+
+.my_custom_table td {
+        padding: 8px;
+        border-radius: 15px;
+}
+
+.custom_image {
+        border-radius: 8px;
+}
+}
+
 
 /***temp stripe css****/
 /***Stripe Button***/
