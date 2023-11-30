@@ -2,7 +2,8 @@ body{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(148, 14, 14);
+    align-items: center;
+    background-color: rgba(28, 28, 28, 1);
     margin-bottom: 60px;
 }
 html {
@@ -25,8 +26,7 @@ nav{
 .footer{
     position: absolute;
     bottom: 0;
-    width: 100%;
-    background-color: #fffbfb;
+    background-color: rgba(28, 28, 28, 1);
 }
 .catagories{
     background-color: rgba(64, 64, 64, 1);
